@@ -1,0 +1,12 @@
+<div class="row">
+    <h2 class="results" >Here are the total scores after this round of prompts</h2>
+    
+    <div v-for=" object of display.scores" class="col-md-2 text-center">
+        <div class="answer">
+            <p><strong>{{object.player}}</strong></p>
+            
+            <p><strong>{{object.score}}</strong></p>
+        </div>
+
+    </div> 
+</div>

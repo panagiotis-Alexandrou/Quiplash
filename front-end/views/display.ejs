@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+    <%- include('header'); -%>
+
+    <h2 class="title">Quiplash</h2>
+
+    <div id="game">
+        <div v-if="connected" class="row">
+            <div class="col-md-9">
+            
+            <div v-if="dstate==0">
+                <br>
+                <h2>Game has not started yet</h2>
+            </div>
+            <div v-else-if="dstate==1">
+                <%-include('waiting'); -%>
+            </div>
+            <div v-else-if="dstate==2">
+                <%-include('promptInProgress'); -%>
+            </div>
+            <div v-else-if="dstate==3 ">
+                <%-include('answersInProgress'); -%>
+            </div>
+            <div v-else-if="dstate==4 ">
+                <%-include('votesInProgress'); -%>
+            </div>
+            <div v-else-if="dstate==5">
+                <%-include('resultsD'); -%>
+            </div>
+            <div v-else-if="dstate==6">
+                <%-include('scoresD'); -%>
+            </div>
+            <div v-else-if="dstate==7 ">
+                <%-include('gameoverd'); -%>
+            </div>
+            
+
+            
+        </div>
+        <div class="col-md-3" v-if="dstate>0">
+            <div >
+                <h2>In-Game Chat</h2>
+                <ul id="chat">
+                    <li v-for="message in messages">{{message}}</li>
+                </ul>
+            </div>
+        </div>
+            
+        </div>
+        <div v-else>
+            <p>Connecting...</p>
+        </div>
+    </div>
+
+    <%- include('footer'); -%>
+
+</html>

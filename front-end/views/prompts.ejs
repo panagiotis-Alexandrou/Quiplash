@@ -1,0 +1,6 @@
+<div class="row">
+    <h2 class="prompt">Enter a funny question or a prompt:</h2>
+    <input type="text" @keyup.enter="sendPrompt()" v-model="prompt" class="form-control" placeholder="funny question or prompt">
+
+    <p><button class="btn btn-sm btn-primary" @click="sendPrompt()">submit</button></p>
+</div>

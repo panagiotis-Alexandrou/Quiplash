@@ -1,0 +1,5 @@
+<div class="row">
+    <h2 class="prompt">{{me.prompt}}</h2>
+    <input type="text" @keyup.enter="sendAnswer()" v-model="answer" class="form-control" placeholder="your answer">
+    <p><button class="btn btn-sm btn-primary" @click="sendAnswer()">submit</button></p>
+</div>

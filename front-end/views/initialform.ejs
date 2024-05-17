@@ -1,0 +1,11 @@
+<div>
+    <h2 class="username">Enter your name:</h2>
+    <input type="text"  v-model="username" class="form-control" placeholder="username">
+
+    <h2 class="password">Enter you password:</h2>
+    <input type="password" @keyup.enter="login()" v-model="password" class="form-control" placeholder="password">
+
+    <p><button class="btn btn-sm btn-primary" @click="login()">Login</button></p>
+    <p><button class="btn btn-sm btn-primary" @click="register()">Register</button></p>
+
+</div>

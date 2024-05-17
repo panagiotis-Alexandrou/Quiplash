@@ -1,0 +1,63 @@
+The application does not include any extensions.
+
+It can be run locally using :
+ 1. npm install
+ 2. npm start
+
+It can be deployed using:
+ 1. npm install
+ 2. npm run gdeploy
+
+The game starts on the client side showing the login/register form
+On unsuccessful register or login the user is prompted with the received from the api message.
+On successful they are directed to the waiting screen where the players are shown.
+When the admin advances, players and audience are asked to submit a funny prompt. These prompts
+are then saved locally and are sent to the api for submission by the end of prompts stage of that round.
+The front end allows any prompt even empty, but the back-end will refuse to store prompts that
+do not adhere to the specification of coursework1 part1. After this prompts are assigned to 
+players (not audience) to answer. When a player submits an answer, if they have more prompts to answer they are asked to
+else they are directed to the wait screen. when the admin advances, all answers are gathered and prompts are looped once
+to start voting. Voting starts and the two answers on the current prompts are shown to audience and players that did not 
+answer with buttons to vote. Once all votes for a single prompt are cast, the game sends the next prompt for voting.
+When the stage advances by the admin the round scores are shown to all players and audience.
+After the admin advances, the round scores are added to the total scores and the total scores are shown to players and
+audience. After advancing the stage is set back to prompts if the round is smaller than 3. if all 3 rounds are finished 
+the game over screen is set on stage and the players are sorted in a descending order having the winner at the top.
+There is a reset game button for the admin to press and reset the game. It directs all players back to the 
+login/register form for a new game to start.
+
+The display has:
+a screen for when the game has not started
+a screen for when players and audience submit prompts
+a screen for when players submit answers
+a screen with the prompt and the two answers for the current voting, for the voting stage. The two answers are not buttons they are just to show the answers.
+a screen for round scores
+a screen for total scores
+a screen for game over 
+
+The app throws the error below when deployed but it operates normally:
+ERROR: (gcloud.app.deploy) Error Response: [9] An internal error occurred while processing task /app-engine-flex/flex_await_healthy/flex_aw
+ait_healthy>2022-12-13T21:34:01.728Z16911.xd.1:
+> ecsexample@1.0.0 start
+> node app.js
+
+node:internal/modules/cjs/loader:988
+  throw err;
+  ^
+
+Error: Cannot find module 'axios'
+Require stack:
+- /app/app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:985:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:833:27)
+    at Module.require (node:internal/modules/cjs/loader:1057:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (/app/app.js:11:15)
+    at Module._compile (node:internal/modules/cjs/loader:1155:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1209:10)
+    at Module.load (node:internal/modules/cjs/loader:1033:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:868:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/app/app.js' ]
+}
