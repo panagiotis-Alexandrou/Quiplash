@@ -35,29 +35,4 @@ a screen for round scores
 a screen for total scores
 a screen for game over 
 
-The app throws the error below when deployed but it operates normally:
-ERROR: (gcloud.app.deploy) Error Response: [9] An internal error occurred while processing task /app-engine-flex/flex_await_healthy/flex_aw
-ait_healthy>2022-12-13T21:34:01.728Z16911.xd.1:
-> ecsexample@1.0.0 start
-> node app.js
-
-node:internal/modules/cjs/loader:988
-  throw err;
-  ^
-
-Error: Cannot find module 'axios'
-Require stack:
-- /app/app.js
-    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:985:15)
-    at Function.Module._load (node:internal/modules/cjs/loader:833:27)
-    at Module.require (node:internal/modules/cjs/loader:1057:19)
-    at require (node:internal/modules/cjs/helpers:103:18)
-    at Object.<anonymous> (/app/app.js:11:15)
-    at Module._compile (node:internal/modules/cjs/loader:1155:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1209:10)
-    at Module.load (node:internal/modules/cjs/loader:1033:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:868:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12) {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: [ '/app/app.js' ]
-}
+const APP_KEY="_fspCcwlcHWs4ODBufBc7TN2sM3K9n9B96cDwYoWeFI5AzFuq_HRfg=="

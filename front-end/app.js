@@ -1,6 +1,5 @@
 'use strict';
 const CLOUD_SERVER="https://quiplashpa1n20.azurewebsites.net/api"
-const APP_KEY="_fspCcwlcHWs4ODBufBc7TN2sM3K9n9B96cDwYoWeFI5AzFuq_HRfg=="
 //Set up express
 const express = require('express');
 const app = express();
