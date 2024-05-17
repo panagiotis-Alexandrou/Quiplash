@@ -34,5 +34,3 @@ a screen with the prompt and the two answers for the current voting, for the vot
 a screen for round scores
 a screen for total scores
 a screen for game over 
-
-"_fspCcwlcHWs4ODBufBc7TN2sM3K9n9B96cDwYoWeFI5AzFuq_HRfg=="
